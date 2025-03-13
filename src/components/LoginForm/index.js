@@ -69,7 +69,6 @@ class LoginForm extends Component {
           value={password}
           onChange={this.onChangePassword}
           placeholder="Password"
-          
         />
       </>
     )
@@ -105,6 +104,7 @@ class LoginForm extends Component {
 
     return (
       <div className="login-form-container">
+        <Home />
         <img
           src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
           className="login-website-logo-mobile-img"
@@ -123,7 +123,7 @@ class LoginForm extends Component {
           />
           <div className="input-container">{this.renderUsernameField()}</div>
           <div className="input-container">{this.renderPasswordField()}</div>
-          <button type="button" className="login-button">
+          <button type="submit" className="login-button">
             Login
           </button>
           {showSubmitError && <p className="error-message">*{errorMsg}</p>}
